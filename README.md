@@ -15,7 +15,7 @@ Driver for working with I2C(TWI) unit of AVR microcontroller.
 ```c++
 void I2C_Init(void); /* Function for Initialize the I2C peripheral. */
 void I2C_DeInit(void); /* Function for Deinitialize the I2C peripheral. */
-void I2C_SetAddress(uint8_t address); /* Function for self I2C address */
+void I2C_SetAddress(uint8_t address); /* Function for self I2C address (use when MCU is slave only) */
 ```
 ### Operation functions:
 ```c++  

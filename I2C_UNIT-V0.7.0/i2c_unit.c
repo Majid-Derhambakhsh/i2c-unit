@@ -197,7 +197,7 @@ void I2C_EndTransmission(uint16_t time_out) /* Function for stop transmission I2
 			
 */
 
-void I2C_SetAddress(uint8_t address) /* Function for self I2C address */
+void I2C_SetAddress(uint8_t address) /* Function for self I2C address (use when MCU is slave only) */
 {
 	/* --------------------------- */
 	_I2C_AR = address << 1; /* Set TWI slave address (upper 7 bits) */
