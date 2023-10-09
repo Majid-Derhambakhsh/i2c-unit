@@ -418,7 +418,7 @@ StatusTypeDef I2C_Master_Transmit(uint8_t dev_address , uint8_t *data , uint32_t
 								  at right before call interface.
 
 					data : Pointer to data buffer.
-					quantity : Amount of data to be sent.
+					quantity : Amount of Bytes to be sent.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -540,7 +540,7 @@ StatusTypeDef I2C_Master_Receive(uint8_t dev_address , uint8_t *data , uint32_t 
 								  at right before call interface.
 
 					data : Pointer to data buffer.
-					quantity : Amount of data to be receive.
+					quantity : Amount of Bytes to be receive.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -686,7 +686,7 @@ StatusTypeDef I2C_Mem_Write(uint8_t dev_address , uint32_t mem_address , uint8_t
 												 _I2C_MEMADD_SIZE_16BIT
 					
 					mem_data : Pointer to data buffer.
-					quantity : Amount of data to be sent.
+					quantity : Amount of Bytes to be sent.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -863,7 +863,7 @@ StatusTypeDef I2C_Mem_Read(uint8_t dev_address , uint32_t mem_address , uint8_t 
 												 _I2C_MEMADD_SIZE_16BIT
 					
 					mem_data : Pointer to data buffer.
-					quantity : Amount of data to be receive.
+					quantity : Amount of Bytes to be receive.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -1007,7 +1007,7 @@ StatusTypeDef I2C_Mem_Erase(uint8_t dev_address , uint32_t mem_address , uint8_t
 												 _I2C_MEMADD_SIZE_8BIT
 												 _I2C_MEMADD_SIZE_16BIT
 					
-					quantity : Amount of data to be erase.
+					quantity : Amount of Bytes to be erase.
 					time_out : Timeout duration.
 	
 	Return Values :
