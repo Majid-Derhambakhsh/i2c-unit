@@ -57,7 +57,7 @@ int main(void)
 {
     DDRC = (1 << SCL_PIN)|(1 << SDA_PIN);
     
-    I2C_Init()'
+    I2C_Init();
     
     while (1) 
     {
