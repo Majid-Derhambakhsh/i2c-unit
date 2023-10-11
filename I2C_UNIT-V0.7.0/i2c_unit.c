@@ -197,7 +197,7 @@ void I2C_EndTransmission(uint16_t time_out) /* Function for stop transmission I2
 			
 */
 
-void I2C_SetAddress(uint8_t address) /* Function for self I2C address */
+void I2C_SetAddress(uint8_t address) /* Function for self I2C address (use when MCU is slave only) */
 {
 	/* --------------------------- */
 	_I2C_AR = address << 1; /* Set TWI slave address (upper 7 bits) */
@@ -418,7 +418,7 @@ StatusTypeDef I2C_Master_Transmit(uint8_t dev_address , uint8_t *data , uint32_t
 								  at right before call interface.
 
 					data : Pointer to data buffer.
-					quantity : Amount of data to be sent.
+					quantity : Amount of Bytes to be sent.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -540,7 +540,7 @@ StatusTypeDef I2C_Master_Receive(uint8_t dev_address , uint8_t *data , uint32_t 
 								  at right before call interface.
 
 					data : Pointer to data buffer.
-					quantity : Amount of data to be receive.
+					quantity : Amount of Bytes to be receive.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -686,7 +686,7 @@ StatusTypeDef I2C_Mem_Write(uint8_t dev_address , uint32_t mem_address , uint8_t
 												 _I2C_MEMADD_SIZE_16BIT
 					
 					mem_data : Pointer to data buffer.
-					quantity : Amount of data to be sent.
+					quantity : Amount of Bytes to be sent.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -863,7 +863,7 @@ StatusTypeDef I2C_Mem_Read(uint8_t dev_address , uint32_t mem_address , uint8_t 
 												 _I2C_MEMADD_SIZE_16BIT
 					
 					mem_data : Pointer to data buffer.
-					quantity : Amount of data to be receive.
+					quantity : Amount of Bytes to be receive.
 					time_out : Timeout duration.
 	
 	Return Values :
@@ -1007,7 +1007,7 @@ StatusTypeDef I2C_Mem_Erase(uint8_t dev_address , uint32_t mem_address , uint8_t
 												 _I2C_MEMADD_SIZE_8BIT
 												 _I2C_MEMADD_SIZE_16BIT
 					
-					quantity : Amount of data to be erase.
+					quantity : Amount of Bytes to be erase.
 					time_out : Timeout duration.
 	
 	Return Values :
